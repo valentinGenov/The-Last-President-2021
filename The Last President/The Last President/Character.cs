@@ -12,13 +12,22 @@ namespace The_Last_President
         private string placeOfBirth;
         private string occupation;
 
-        public Character(string n, string s, int a)
+        public Character()
+        {
+            this.Name = "Character 1";
+            this.Sex = "Male";
+            this.Age = 21;
+            this.PlaceOfBirth = "Bulgaria";
+            this.Occupation = "Bodyguard";
+        }
+
+        public Character(string n, string s, int a, string po, string occ)
         {
             this.Name = n;
             this.Sex = s;
             this.Age = a;
-            this.placeOfBirth = "Japan";
-            this.occupation = "Soldier(BodyGuard)";
+            this.PlaceOfBirth = po;
+            this.Occupation = occ;
         }
 
         public string Name
@@ -30,7 +39,16 @@ namespace The_Last_President
         public string Sex
         {
             get { return this.sex; }
-            set { this.sex = value; }
+            set { 
+                
+                if (value == "Female" || value == "Male" || value == "male" || value == "female")
+	            {
+                    this.sex = value;
+	            } else {
+                    Console.WriteLine("Sorry! Please choose proper sex (male/female): ");
+                }
+
+            }
         }
 
         public int Age
@@ -44,9 +62,21 @@ namespace The_Last_President
                 }
                 else
                 {
-                    Console.WriteLine("This person is very old! ");
+                    Console.WriteLine("This person is too old! ");
                 }
             }
+        }
+
+        public string PlaceOfBirth
+        {
+            get { return this.placeOfBirth; }
+            set { this.placeOfBirth = value; }
+        }
+
+         public string Occupation
+        {
+            get { return this.occupation; }
+            set { this.occupation = value; }
         }
 
         public override string ToString()
