@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\valbg\\source\\repos\\The Last President\\The Last President\\The Last President.csproj",
+      "projectUniqueName": "C:\\the-last-president\\The-Last-President-2021\\The Last President\\The Last President.csproj",
       "projectName": "The Last President",
-      "projectPath": "C:\\Users\\valbg\\source\\repos\\The Last President\\The Last President\\The Last President.csproj",
+      "projectPath": "C:\\the-last-president\\The-Last-President-2021\\The Last President\\The Last President.csproj",
       "packagesPath": "C:\\Users\\valbg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\valbg\\source\\repos\\The Last President\\The Last President\\obj\\",
+      "outputPath": "C:\\the-last-president\\The-Last-President-2021\\The Last President\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\valbg\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -28,10 +28,10 @@ namespace The_Last_President
             this.CurrentPopulation = currPop;
             this.NameOfCountry = nOC;
             this.PresidentOfCountry = pOC;
-            this.StatusOfPresident = sOP
+            this.StatusOfPresident = sOP;
         }
 
-        public int StatusOfPresident
+        public bool StatusOfPresident
         {
             get { return this.statusOfPresident; }
             set { this.statusOfPresident = value; }

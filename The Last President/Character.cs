@@ -11,6 +11,8 @@ namespace The_Last_President
         private int age;
         private string placeOfBirth;
         private string occupation;
+        private string location;
+        private int points;
 
         public Character()
         {
@@ -19,21 +21,36 @@ namespace The_Last_President
             this.Age = 21;
             this.PlaceOfBirth = "Bulgaria";
             this.Occupation = "Bodyguard";
+            this.location = "Bulgaria";
+            this.points = 0;
         }
 
-        public Character(string n, string s, int a, string po, string occ)
+        public Character(string n, string s, int a, string po, string occ, string loc, int pnts)
         {
             this.Name = n;
             this.Sex = s;
             this.Age = a;
             this.PlaceOfBirth = po;
             this.Occupation = occ;
+            this.Location = loc;
+            this.Points = pnts;
         }
 
         public string Name
         {
             get { return this.name; }
             set { this.name = value; }
+        }
+        public int Points
+        {
+            get { return this.points; }
+            set { this.points = value; }
+        }
+
+        public string Location
+        {
+            get { return this.location; }
+            set { this.location = value; }
         }
 
         public string Sex
@@ -86,7 +103,7 @@ namespace The_Last_President
 
         public override string ToString()
         {
-            return "Name: " + this.Name + " / Sex: " + this.Sex + " / Age: " + this.Age + " / Place of Birth: " + this.placeOfBirth + " / Occupation " + this.occupation;
+            return "Name: " + this.Name + " / Sex: " + this.Sex + " / Age: " + this.Age + " / Place of Birth: " + this.placeOfBirth + " / Occupation " + this.occupation + " / Location: " + this.location;
         }
     }
 }

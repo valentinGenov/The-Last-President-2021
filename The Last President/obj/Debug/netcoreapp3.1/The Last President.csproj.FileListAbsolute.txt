@@ -11,3 +11,16 @@ C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netc
 C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.dll
 C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.pdb
 C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.genruntimeconfig.cache
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.csprojAssemblyReference.cache
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfoInputs.cache
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfo.cs
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.csproj.CoreCompileInputs.cache
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.dll
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.pdb
+C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.exe
+C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.deps.json
+C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.json
+C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.dev.json
+C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.dll
+C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.pdb
+C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.genruntimeconfig.cache
