@@ -1,0 +1,13 @@
+C:\Users\valbg\source\repos\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.exe
+C:\Users\valbg\source\repos\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.deps.json
+C:\Users\valbg\source\repos\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.json
+C:\Users\valbg\source\repos\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.dev.json
+C:\Users\valbg\source\repos\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.dll
+C:\Users\valbg\source\repos\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.pdb
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.csprojAssemblyReference.cache
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfoInputs.cache
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfo.cs
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.csproj.CoreCompileInputs.cache
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.dll
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.pdb
+C:\Users\valbg\source\repos\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.genruntimeconfig.cache
