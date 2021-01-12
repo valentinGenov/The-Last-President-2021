@@ -20,20 +20,14 @@ namespace The_Last_President
             Console.WriteLine("Enter the Sex (Male or Female): ");
             string sex = Console.ReadLine();
 
-            Console.WriteLine("Enter the Age: ");
-            int age = Int32.Parse(Console.ReadLine());
-
             Console.WriteLine("Enter the Place of Birth: ");
             string pob = Console.ReadLine();
-
-            Console.WriteLine("Enter the occupation: ");
-            string occupation = Console.ReadLine();
 
             Console.Clear();
 
             string loc1 = pob;
 
-            Character firstCharacter = new Character(name, sex, age, pob, occupation, loc1, 0);
+            Character firstCharacter = new Character(name, sex, pob, loc1, 0);
 
             Console.WriteLine("\n");
             Console.WriteLine(firstCharacter);
@@ -49,15 +43,15 @@ namespace The_Last_President
 
             if (sex == "male" || sex == "Male")
             {
-                Console.WriteLine("The two presidents gathered to talk about their military power. At one time a president falls to the ground with a high fever and difficulty breathing and snuggle bouquet.Immediately evacuated another president and start Studies have body president. It soon became clear that he had been infected with the Covid-19.");
-                Console.WriteLine("The president decides to leave his country.He wonders who will choose to be with him as a bodyguard and decides to choose you.");
-                Console.WriteLine("The President: 'If someone has to be my bodyguard, I prefer it to be you, " + firstCharacter.Name + " !'");
+                Console.WriteLine("One day there was a secret meeting of all the presidents about the contagion that had occurred. But no one suspected that one of these presidents was infected.");
+                Console.WriteLine(" After falling to the ground, doctors and specialists entered the room with the infection, and so they identified that this president was infected. All the presidents returned to their countries and began to choose who would be worthy and most suitable for the job as a bodyguard.");
+                Console.WriteLine("Many candidates passed, but in the end the presidents made a decision and elected you, " + firstCharacter.Name + "!'");
             }
             else
             {
-                Console.WriteLine("The two presidents gathered to talk about their military power. At one time a president falls to the ground with a high fever and difficulty breathing and snuggle bouquet.Immediately evacuated another president and start Studies have body president. It soon became clear that he had been infected with the Covid-19.");
-                Console.WriteLine("The president decides to leave his country.He wonders who will choose to be with him as a bodyguard and decides to choose you.");
-                Console.WriteLine("The President: 'If someone has to be my bodyguard, I prefer it to be you, " + firstCharacter.Name + "!'");
+                Console.WriteLine("On]y there was a secret meeting of all the presidents about the contagion that had occurred. But no one suspected that one of these presidents was infected.");
+                Console.WriteLine(" After falling to the ground, doctors and specialists entered the room with the infection, and so they identified that this president was infected. All the presidents returned to their countries and began to choose who would be worthy and most suitable for the job as a bodyguard.");
+                Console.WriteLine("Many candidates passed, but in the end the presidents made a decision and elected you, " + firstCharacter.Name + "!'");
             }
             Console.Read();
 
@@ -78,7 +72,6 @@ namespace The_Last_President
             Country France = new Country(67147000, 67147000, "France", "Alive & Not Saved", true);
             Country Italy = new Country(60317116, 60317116, "Italy", "Alive & Not Saved", true);
             Country US = new Country(328239523, 328239523, "United States", "Alive & Not Saved", true);
-            Country China = new Country(1400050000, 1400050000, "China", "Alive & Not Saved", true);
 
             //Making you place of birth country with saved president and adding +1 points.
             if (firstCharacter.PlaceOfBirth == "Bulgaria")
@@ -111,12 +104,6 @@ namespace The_Last_President
                 Console.WriteLine("Since you choose United States you automaticaly saved The President Of United States!");
                 firstCharacter.Points++;
             }
-            else if (firstCharacter.PlaceOfBirth == "China")
-            {
-                China.PresidentOfCountry = "Alive & Saved";
-                Console.WriteLine("Since you choose China you automaticaly saved The President Of China!");
-                firstCharacter.Points++;
-            }
             else
             {
                 Console.WriteLine("You inputed place of birth not in the data...");
@@ -128,7 +115,7 @@ namespace The_Last_President
              * 
              */
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 1; i < 100; i++)
             {
 
                 //Show countries and give ability to choose where to go...
@@ -141,18 +128,17 @@ namespace The_Last_President
 
                 int deathsThisRound1 = Bulgaria.Population - Bulgaria.CurrentPopulation;
 
-                if (deathsThisRound1 == 0)
+                Console.BackgroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("            Country List            ");
+
+                Console.ResetColor();
+
+                Console.WriteLine("\n");
+
+                if (deathsThisRound1 == 0 /*&& i > 1 */)
                 {
-                    Console.BackgroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("            Country List            ");
-
-                    Console.ResetColor();
-
-                    Console.WriteLine("\n");
-                    Console.WriteLine("\n");
-
                     if (Bulgaria.PresidentOfCountry == "Alive & Not Saved")
                     {
                         Console.Write(Bulgaria.NameOfCountry + " - " + "Current Population: " + Bulgaria.CurrentPopulation);
@@ -209,15 +195,6 @@ namespace The_Last_President
                 }
                 else
                 {
-
-                    Console.BackgroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.WriteLine("Country List");
-
-                    Console.ResetColor();
-
-                    Console.WriteLine("\n");
 
                     if (Bulgaria.PresidentOfCountry == "Alive & Not Saved")
                     {
@@ -752,126 +729,6 @@ namespace The_Last_President
                         Console.WriteLine("There is an error in the code section for Death and Presidents most likely!");
                     }
                 }
-
-                /*
-                 * 
-                 * DEATHS AND PRESIDENTS CHINA
-                 * 
-                 */
-
-                int deathsThisRound6 = China.Population - China.CurrentPopulation;
-
-                if (deathsThisRound6 == 0)
-                {
-                    if (China.PresidentOfCountry == "Alive & Not Saved")
-                    {
-                        Console.Write(China.NameOfCountry + " - " + "Current Population: " + China.CurrentPopulation);
-
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(" +" + deathsThisRound6);
-                        Console.ResetColor();
-
-                        Console.Write(" / President status: ");
-
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write(China.PresidentOfCountry);
-                        Console.ResetColor();
-
-                        Console.WriteLine("\n");
-                    }
-                    else if (China.PresidentOfCountry == "Alive & Saved")
-                    {
-                        Console.Write(China.NameOfCountry + " - " + "Current Population: " + China.CurrentPopulation);
-
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(" +" + deathsThisRound6);
-                        Console.ResetColor();
-
-                        Console.Write(" / President status: ");
-
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(China.PresidentOfCountry);
-                        Console.ResetColor();
-
-                        Console.WriteLine("\n");
-                    }
-                    else if (China.PresidentOfCountry == "Death")
-                    {
-                        Console.Write(China.NameOfCountry + " - " + "Current Population: " + China.CurrentPopulation);
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(" +" + deathsThisRound6);
-                        Console.ResetColor();
-
-                        Console.Write(" / President status: ");
-
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(China.PresidentOfCountry);
-                        Console.ResetColor();
-
-                        Console.WriteLine("\n");
-                    }
-                    else
-                    {
-                        Console.WriteLine("There is an error in the code section for Death and Presidents most likely!");
-                    }
-
-                    Console.WriteLine("\n");
-                }
-                else
-                {
-                    if (US.PresidentOfCountry == "Alive & Not Saved")
-                    {
-                        Console.Write(China.NameOfCountry + " - " + "Current Population: " + China.CurrentPopulation);
-
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(" -" + deathsThisRound6);
-                        Console.ResetColor();
-
-                        Console.Write(" / President status: ");
-
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write(China.PresidentOfCountry);
-                        Console.ResetColor();
-
-                        Console.WriteLine("\n");
-                    }
-                    else if (China.PresidentOfCountry == "Alive & Saved")
-                    {
-                        Console.Write(China.NameOfCountry + " - " + "Current Population: " + China.CurrentPopulation);
-
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(" -" + deathsThisRound6);
-                        Console.ResetColor();
-
-                        Console.Write(" / President status: ");
-
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(China.PresidentOfCountry);
-                        Console.ResetColor();
-
-                        Console.WriteLine("\n");
-                    }
-                    else if (China.PresidentOfCountry == "Death")
-                    {
-                        Console.Write(China.NameOfCountry + " - " + "Current Population: " + US.CurrentPopulation);
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(" -" + deathsThisRound6);
-                        Console.ResetColor();
-
-                        Console.Write(" / President status: ");
-
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(China.PresidentOfCountry);
-                        Console.ResetColor();
-
-                        Console.WriteLine("\n");
-                    }
-                    else
-                    {
-                        Console.WriteLine("There is an error in the code section for Death and Presidents most likely!");
-                    }
-                }
-
                 Console.WriteLine("Which country would you like to go to?");
 
                 string choice = Console.ReadLine();
@@ -919,14 +776,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 1000);
                                 int randDeaths4 = Country.RandomNumber(0, 1000);
                                 int randDeaths5 = Country.RandomNumber(0, 1000);
-                                int randDeaths6 = Country.RandomNumber(0, 1000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 2)
                             {
@@ -935,14 +790,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 50000);
                                 int randDeaths4 = Country.RandomNumber(0, 50000);
                                 int randDeaths5 = Country.RandomNumber(0, 50000);
-                                int randDeaths6 = Country.RandomNumber(0, 50000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 3)
                             {
@@ -951,30 +804,27 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths4 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths5 = Country.RandomNumber(50000, 4000000);
-                                int randDeaths6 = Country.RandomNumber(50000, 4000000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
 
                             //President being dead or saved logic
                             //1. Being dead or not
 
-                            int randDie1 = Country.RandomNumber(1, 10);
-                            int randDie2 = Country.RandomNumber(1, 10);
-                            int randDie3 = Country.RandomNumber(1, 10);
-                            int randDie4 = Country.RandomNumber(1, 10);
-                            int randDie5 = Country.RandomNumber(1, 10);
-                            int randDie6 = Country.RandomNumber(1, 10);
+                            int randDie1 = Country.RandomNumber(1, 6);
+                            int randDie2 = Country.RandomNumber(1, 6);
+                            int randDie3 = Country.RandomNumber(1, 6);
+                            int randDie4 = Country.RandomNumber(1, 6);
+                            int randDie5 = Country.RandomNumber(1, 6);
                             if (randDie1 == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Alive & Saved")
                                 {
-                                    //continue
+
                                 }
                                 else
                                 {
@@ -1025,90 +875,73 @@ namespace The_Last_President
                                     US.PresidentOfCountry = "Death";
                                 }
                             }
-                            if (randDie6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Alive & Saved")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Death";
-                                }
-                            }
+
 
                             //2. Being saved or not if not dead already
-                            int randSave1 = Country.RandomNumber(1, 5);
-                            int randSave2 = Country.RandomNumber(1, 5);
-                            int randSave3 = Country.RandomNumber(1, 5);
-                            int randSave4 = Country.RandomNumber(1, 5);
-                            int randSave5 = Country.RandomNumber(1, 5);
-                            int randSave6 = Country.RandomNumber(1, 5);
+                            int randSave1a = Country.RandomNumber(1, 3);
+                            int randSave2a = Country.RandomNumber(1, 3);
+                            int randSave3a = Country.RandomNumber(1, 3);
+                            int randSave4a = Country.RandomNumber(1, 3);
+                            int randSave5a = Country.RandomNumber(1, 3);
 
-                            if (randSave1 == 1)
+                            if (randSave1a == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Bulgaria")
                                 {
                                     Bulgaria.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave2 == 1)
+                            if (randSave2a == 1)
                             {
                                 if (Germany.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Germany")
                                 {
                                     Germany.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave3 == 1)
+                            if (randSave3a == 1)
                             {
                                 if (France.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "France")
                                 {
                                     France.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave4 == 1)
+                            if (randSave4a == 1)
                             {
                                 if (Italy.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Italy")
                                 {
                                     Italy.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave5 == 1)
+                            if (randSave5a == 1)
                             {
                                 if (US.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "US")
                                 {
                                     US.PresidentOfCountry = "Alive & Saved";
-                                }
-                            }
-                            if (randSave6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
                         }
@@ -1168,14 +1001,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 1000);
                                 int randDeaths4 = Country.RandomNumber(0, 1000);
                                 int randDeaths5 = Country.RandomNumber(0, 1000);
-                                int randDeaths6 = Country.RandomNumber(0, 1000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 2)
                             {
@@ -1184,14 +1015,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 50000);
                                 int randDeaths4 = Country.RandomNumber(0, 50000);
                                 int randDeaths5 = Country.RandomNumber(0, 50000);
-                                int randDeaths6 = Country.RandomNumber(0, 50000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 3)
                             {
@@ -1200,14 +1029,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths4 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths5 = Country.RandomNumber(50000, 4000000);
-                                int randDeaths6 = Country.RandomNumber(50000, 4000000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                         }
                         else if (choiceToContinueGermany == "n" || choiceToContinueGermany == "no" || choiceToContinueGermany == "No")
@@ -1231,12 +1058,11 @@ namespace The_Last_President
                         //President being dead or saved logic
                         //1. Being dead or not
 
-                        int randDie1G = Country.RandomNumber(1, 25);
-                        int randDie2G = Country.RandomNumber(1, 25);
-                        int randDie3G = Country.RandomNumber(1, 25);
-                        int randDie4G = Country.RandomNumber(1, 25);
-                        int randDie5G = Country.RandomNumber(1, 25);
-                        int randDie6G = Country.RandomNumber(1, 25);
+                        int randDie1G = Country.RandomNumber(1, 6);
+                        int randDie2G = Country.RandomNumber(1, 6);
+                        int randDie3G = Country.RandomNumber(1, 6);
+                        int randDie4G = Country.RandomNumber(1, 6);
+                        int randDie5G = Country.RandomNumber(1, 6);
                         if (randDie1G == 1)
                         {
                             if (Bulgaria.PresidentOfCountry == "Alive & Saved")
@@ -1292,25 +1118,13 @@ namespace The_Last_President
                                 US.PresidentOfCountry = "Death";
                             }
                         }
-                        if (randDie6G == 1)
-                        {
-                            if (China.PresidentOfCountry == "Alive & Saved")
-                            {
-                                //continue
-                            }
-                            else
-                            {
-                                China.PresidentOfCountry = "Death";
-                            }
-                        }
 
                         //2. Being saved or not if not dead already
-                        int randSave1G = Country.RandomNumber(1, 20);
-                        int randSave2G = Country.RandomNumber(1, 20);
-                        int randSave3G = Country.RandomNumber(1, 20);
-                        int randSave4G = Country.RandomNumber(1, 20);
-                        int randSave5G = Country.RandomNumber(1, 20);
-                        int randSave6G = Country.RandomNumber(1, 20);
+                        int randSave1G = Country.RandomNumber(1, 3);
+                        int randSave2G = Country.RandomNumber(1, 3);
+                        int randSave3G = Country.RandomNumber(1, 3);
+                        int randSave4G = Country.RandomNumber(1, 3);
+                        int randSave5G = Country.RandomNumber(1, 3);
 
                         if (randSave1G == 1)
                         {
@@ -1318,9 +1132,10 @@ namespace The_Last_President
                             {
                                 //continue
                             }
-                            else
+                            else if (firstCharacter.Location == "Bulgaria")
                             {
                                 Bulgaria.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
                         }
                         if (randSave2G == 1)
@@ -1329,9 +1144,10 @@ namespace The_Last_President
                             {
                                 //continue
                             }
-                            else
+                            else if (firstCharacter.Location == "Germany")
                             {
                                 Germany.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
                         }
                         if (randSave3G == 1)
@@ -1340,9 +1156,10 @@ namespace The_Last_President
                             {
                                 //continue
                             }
-                            else
+                            else if (firstCharacter.Location == "France")
                             {
                                 France.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
                         }
                         if (randSave4G == 1)
@@ -1351,9 +1168,10 @@ namespace The_Last_President
                             {
                                 //continue
                             }
-                            else
+                            else if (firstCharacter.Location == "Italy")
                             {
                                 Italy.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
                         }
                         if (randSave5G == 1)
@@ -1362,20 +1180,10 @@ namespace The_Last_President
                             {
                                 //continue
                             }
-                            else
+                            else if (firstCharacter.Location == "US")
                             {
                                 US.PresidentOfCountry = "Alive & Saved";
-                            }
-                        }
-                        if (randSave6G == 1)
-                        {
-                            if (China.PresidentOfCountry == "Death")
-                            {
-                                //continue
-                            }
-                            else
-                            {
-                                China.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
                         }
                         else if (choiceToContinueGermany == "n" || choiceToContinueGermany == "no" || choiceToContinueGermany == "No")
@@ -1386,7 +1194,7 @@ namespace The_Last_President
 
                     /*
                     * 
-                    *  BULGARIA LOGIC HERE
+                    *  FRANCE LOGIC HERE
                     * 
                     */
                     case "France":
@@ -1421,14 +1229,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 1000);
                                 int randDeaths4 = Country.RandomNumber(0, 1000);
                                 int randDeaths5 = Country.RandomNumber(0, 1000);
-                                int randDeaths6 = Country.RandomNumber(0, 1000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 2)
                             {
@@ -1437,14 +1243,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 50000);
                                 int randDeaths4 = Country.RandomNumber(0, 50000);
                                 int randDeaths5 = Country.RandomNumber(0, 50000);
-                                int randDeaths6 = Country.RandomNumber(0, 50000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 3)
                             {
@@ -1453,25 +1257,22 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths4 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths5 = Country.RandomNumber(50000, 4000000);
-                                int randDeaths6 = Country.RandomNumber(50000, 4000000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
 
                             //President being dead or saved logic
                             //1. Being dead or not
 
-                            int randDie1 = Country.RandomNumber(1, 25);
-                            int randDie2 = Country.RandomNumber(1, 25);
-                            int randDie3 = Country.RandomNumber(1, 25);
-                            int randDie4 = Country.RandomNumber(1, 25);
-                            int randDie5 = Country.RandomNumber(1, 25);
-                            int randDie6 = Country.RandomNumber(1, 25);
+                            int randDie1 = Country.RandomNumber(1, 6);
+                            int randDie2 = Country.RandomNumber(1, 6);
+                            int randDie3 = Country.RandomNumber(1, 6);
+                            int randDie4 = Country.RandomNumber(1, 6);
+                            int randDie5 = Country.RandomNumber(1, 6);
                             if (randDie1 == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Alive & Saved")
@@ -1527,90 +1328,72 @@ namespace The_Last_President
                                     US.PresidentOfCountry = "Death";
                                 }
                             }
-                            if (randDie6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Alive & Saved")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Death";
-                                }
-                            }
 
                             //2. Being saved or not if not dead already
-                            int randSave1 = Country.RandomNumber(1, 20);
-                            int randSave2 = Country.RandomNumber(1, 20);
-                            int randSave3 = Country.RandomNumber(1, 20);
-                            int randSave4 = Country.RandomNumber(1, 20);
-                            int randSave5 = Country.RandomNumber(1, 20);
-                            int randSave6 = Country.RandomNumber(1, 20);
+                            int randSave1b = Country.RandomNumber(1, 3);
+                            int randSave2b = Country.RandomNumber(1, 3);
+                            int randSave3b = Country.RandomNumber(1, 3);
+                            int randSave4b = Country.RandomNumber(1, 3);
+                            int randSave5b = Country.RandomNumber(1, 3);
 
-                            if (randSave1 == 1)
+                            if (randSave1b == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Bulgaria")
                                 {
                                     Bulgaria.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave2 == 1)
+                            if (randSave2b == 1)
                             {
                                 if (Germany.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Germany")
                                 {
                                     Germany.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave3 == 1)
+                            if (randSave3b == 1)
                             {
                                 if (France.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "France")
                                 {
                                     France.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave4 == 1)
+                            if (randSave4b == 1)
                             {
                                 if (Italy.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Italy")
                                 {
                                     Italy.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave5 == 1)
+                            if (randSave5b == 1)
                             {
                                 if (US.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "US")
                                 {
                                     US.PresidentOfCountry = "Alive & Saved";
-                                }
-                            }
-                            if (randSave6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
                         }
@@ -1669,14 +1452,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 1000);
                                 int randDeaths4 = Country.RandomNumber(0, 1000);
                                 int randDeaths5 = Country.RandomNumber(0, 1000);
-                                int randDeaths6 = Country.RandomNumber(0, 1000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 2)
                             {
@@ -1685,14 +1466,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 50000);
                                 int randDeaths4 = Country.RandomNumber(0, 50000);
                                 int randDeaths5 = Country.RandomNumber(0, 50000);
-                                int randDeaths6 = Country.RandomNumber(0, 50000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 3)
                             {
@@ -1701,25 +1480,22 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths4 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths5 = Country.RandomNumber(50000, 4000000);
-                                int randDeaths6 = Country.RandomNumber(50000, 4000000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
 
                             //President being dead or saved logic
                             //1. Being dead or not
 
-                            int randDie1 = Country.RandomNumber(1, 25);
-                            int randDie2 = Country.RandomNumber(1, 25);
-                            int randDie3 = Country.RandomNumber(1, 25);
-                            int randDie4 = Country.RandomNumber(1, 25);
-                            int randDie5 = Country.RandomNumber(1, 25);
-                            int randDie6 = Country.RandomNumber(1, 25);
+                            int randDie1 = Country.RandomNumber(1, 6);
+                            int randDie2 = Country.RandomNumber(1, 6);
+                            int randDie3 = Country.RandomNumber(1, 6);
+                            int randDie4 = Country.RandomNumber(1, 6);
+                            int randDie5 = Country.RandomNumber(1, 6);
                             if (randDie1 == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Alive & Saved")
@@ -1775,90 +1551,72 @@ namespace The_Last_President
                                     US.PresidentOfCountry = "Death";
                                 }
                             }
-                            if (randDie6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Alive & Saved")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Death";
-                                }
-                            }
 
                             //2. Being saved or not if not dead already
-                            int randSave1 = Country.RandomNumber(1, 20);
-                            int randSave2 = Country.RandomNumber(1, 20);
-                            int randSave3 = Country.RandomNumber(1, 20);
-                            int randSave4 = Country.RandomNumber(1, 20);
-                            int randSave5 = Country.RandomNumber(1, 20);
-                            int randSave6 = Country.RandomNumber(1, 20);
+                            int randSave1c = Country.RandomNumber(1, 3);
+                            int randSave2c = Country.RandomNumber(1, 3);
+                            int randSave3c = Country.RandomNumber(1, 3);
+                            int randSave4c = Country.RandomNumber(1, 3);
+                            int randSave5c = Country.RandomNumber(1, 3);
 
-                            if (randSave1 == 1)
+                            if (randSave1c == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Bulgaria")
                                 {
                                     Bulgaria.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave2 == 1)
+                            if (randSave2c == 1)
                             {
                                 if (Germany.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Germany")
                                 {
                                     Germany.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave3 == 1)
+                            if (randSave3c == 1)
                             {
                                 if (France.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "France")
                                 {
                                     France.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave4 == 1)
+                            if (randSave4c == 1)
                             {
                                 if (Italy.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "Italy")
                                 {
                                     Italy.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
-                            if (randSave5 == 1)
+                            if (randSave5c == 1)
                             {
                                 if (US.PresidentOfCountry == "Death")
                                 {
                                     //continue
                                 }
-                                else
+                                else if (firstCharacter.Location == "US")
                                 {
                                     US.PresidentOfCountry = "Alive & Saved";
-                                }
-                            }
-                            if (randSave6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Alive & Saved";
+                                    firstCharacter.Points++;
                                 }
                             }
                         }
@@ -1919,14 +1677,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 1000);
                                 int randDeaths4 = Country.RandomNumber(0, 1000);
                                 int randDeaths5 = Country.RandomNumber(0, 1000);
-                                int randDeaths6 = Country.RandomNumber(0, 1000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 2)
                             {
@@ -1935,14 +1691,12 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(0, 50000);
                                 int randDeaths4 = Country.RandomNumber(0, 50000);
                                 int randDeaths5 = Country.RandomNumber(0, 50000);
-                                int randDeaths6 = Country.RandomNumber(0, 50000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
                             else if (randVolume == 3)
                             {
@@ -1951,25 +1705,22 @@ namespace The_Last_President
                                 int randDeaths3 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths4 = Country.RandomNumber(50000, 4000000);
                                 int randDeaths5 = Country.RandomNumber(50000, 4000000);
-                                int randDeaths6 = Country.RandomNumber(50000, 4000000);
 
                                 Bulgaria.CurrentPopulation -= randDeaths1;
                                 Germany.CurrentPopulation -= randDeaths2;
                                 France.CurrentPopulation -= randDeaths3;
                                 Italy.CurrentPopulation -= randDeaths4;
                                 US.CurrentPopulation -= randDeaths5;
-                                China.CurrentPopulation -= randDeaths6;
                             }
 
                             //President being dead or saved logic
                             //1. Being dead or not
 
-                            int randDie1 = Country.RandomNumber(1, 25);
-                            int randDie2 = Country.RandomNumber(1, 25);
-                            int randDie3 = Country.RandomNumber(1, 25);
-                            int randDie4 = Country.RandomNumber(1, 25);
-                            int randDie5 = Country.RandomNumber(1, 25);
-                            int randDie6 = Country.RandomNumber(1, 25);
+                            int randDie1 = Country.RandomNumber(1, 6);
+                            int randDie2 = Country.RandomNumber(1, 6);
+                            int randDie3 = Country.RandomNumber(1, 6);
+                            int randDie4 = Country.RandomNumber(1, 6);
+                            int randDie5 = Country.RandomNumber(1, 6);
                             if (randDie1 == 1)
                             {
                                 if (Bulgaria.PresidentOfCountry == "Alive & Saved")
@@ -2025,91 +1776,73 @@ namespace The_Last_President
                                     US.PresidentOfCountry = "Death";
                                 }
                             }
-                            if (randDie6 == 1)
-                            {
-                                if (China.PresidentOfCountry == "Alive & Saved")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Death";
-                                }
-                            }
+                        }
 
-                            //2. Being saved or not if not dead already
-                            int randSave1 = Country.RandomNumber(1, 20);
-                            int randSave2 = Country.RandomNumber(1, 20);
-                            int randSave3 = Country.RandomNumber(1, 20);
-                            int randSave4 = Country.RandomNumber(1, 20);
-                            int randSave5 = Country.RandomNumber(1, 20);
-                            int randSave6 = Country.RandomNumber(1, 20);
+                        //2. Being saved or not if not dead already
+                        int randSave1 = Country.RandomNumber(1, 3);
+                        int randSave2 = Country.RandomNumber(1, 3);
+                        int randSave3 = Country.RandomNumber(1, 3);
+                        int randSave4 = Country.RandomNumber(1, 3);
+                        int randSave5 = Country.RandomNumber(1, 3);
 
-                            if (randSave1 == 1)
+                        if (randSave1 == 1)
+                        {
+                            if (Bulgaria.PresidentOfCountry == "Death")
                             {
-                                if (Bulgaria.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    Bulgaria.PresidentOfCountry = "Alive & Saved";
-                                }
+                                //continue
                             }
-                            if (randSave2 == 1)
+                            else if (firstCharacter.Location == "Bulgaria")
                             {
-                                if (Germany.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    Germany.PresidentOfCountry = "Alive & Saved";
-                                }
+                                Bulgaria.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
-                            if (randSave3 == 1)
+                        }
+                        if (randSave2 == 1)
+                        {
+                            if (Germany.PresidentOfCountry == "Death")
                             {
-                                if (France.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    France.PresidentOfCountry = "Alive & Saved";
-                                }
+                                //continue
                             }
-                            if (randSave4 == 1)
+                            else if (firstCharacter.Location == "Germany")
                             {
-                                if (Italy.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    Italy.PresidentOfCountry = "Alive & Saved";
-                                }
+                                Germany.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
-                            if (randSave5 == 1)
+                        }
+                        if (randSave3 == 1)
+                        {
+                            if (France.PresidentOfCountry == "Death")
                             {
-                                if (US.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    US.PresidentOfCountry = "Alive & Saved";
-                                }
+                                //continue
                             }
-                            if (randSave6 == 1)
+                            else if (firstCharacter.Location == "France")
                             {
-                                if (China.PresidentOfCountry == "Death")
-                                {
-                                    //continue
-                                }
-                                else
-                                {
-                                    China.PresidentOfCountry = "Alive & Saved";
-                                }
+                                France.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
+                            }
+                        }
+                        if (randSave4 == 1)
+                        {
+                            if (Italy.PresidentOfCountry == "Death")
+                            {
+                                //continue
+                            }
+                            else if (firstCharacter.Location == "Italy")
+                            {
+                                Italy.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
+                            }
+                        }
+                        if (randSave5 == 1)
+                        {
+                            if (US.PresidentOfCountry == "Death")
+                            {
+                                //continue
+                            }
+                            else if (firstCharacter.Location == "US")
+                            {
+                                US.PresidentOfCountry = "Alive & Saved";
+                                firstCharacter.Points++;
                             }
                         }
                         else if (choiceToContinueUS == "n" || choiceToContinueUS == "no" || choiceToContinueUS == "No")
@@ -2130,10 +1863,141 @@ namespace The_Last_President
                             break;
                         }
                         break;
+
+                        // CHECK END OF THE GAME
+
                 }
+
+                int checkForDeaths = Bulgaria.CurrentPopulation + France.CurrentPopulation + US.CurrentPopulation + Germany.CurrentPopulation + Italy.CurrentPopulation;
+
+                if (firstCharacter.Points == 6)
+                {
+                    //WIN
+                    Console.WriteLine("Well done brave soldier, " + firstCharacter.Name + ", the Presidents have been saved and the world can recover a little easier. The bodyguard was awarded a medal for bravery, a medal for bravery and a medal for devotion.");
+                    Console.WriteLine("Reason for win: You saved all 6 presidents! Congrats!");
+                    break;
+                }
+                else if (checkForDeaths < 100 && firstCharacter.Points < 3)
+                {
+                    //LOSE
+                    Console.WriteLine("Well done to you, brave soldier, you did well, but you failed to save enough presidents.And the world cannot be restored.");
+                    Console.WriteLine("Reason for lose: All people of the world died... Try to save more presidents faster!");
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 3)
+                {
+                    //LOSE
+                    Console.WriteLine("Well done to you, brave soldier, you did well, but you failed to save enough presidents.And the world cannot be restored.");
+                    Console.WriteLine("Reason for lose: All presidents died... Try to save at least 3 presidents faster!");
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points >= 3)
+                {
+                    //WIN
+                    Console.WriteLine("Well done brave soldier, " + firstCharacter.Name + ", the Presidents have been saved and the world can recover a little easier. The bodyguard was awarded a medal for bravery, a medal for bravery and a medal for devotion.");
+                    Console.WriteLine("Reason for win: All presidents died, but you managed to save" + firstCharacter.Points + " presidents!");
+                    break;
+                } //ENDING 1
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" & firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (France.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
+                {
+                    break;
+                }
+                else if (Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                } //ENDINGS 2
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" & firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                } // ENDING 3
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
+                {
+                    break;
+                }
+                else if (Bulgaria.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
+                {
+                    break;
+                }
+                else if (Germany.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
+                {
+                    break;
+                }
+                else if (France.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
+                {
+                    break;
+                }
+                else if (Italy.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
+                {
+                    break;
+                }
+                else if (US.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
+                {
+                    break;
+                }
+
+
+
             }
-
-
         }
     }
 }
