@@ -30,7 +30,7 @@ Project is created with:
 * OOP C#
 * Color Libraly from C#
 
-You can check the UML Diagram of the classes in here: *link*
+You can check the UML Diagram of the classes in here: *https://www.diagrameditor.com/?fbclid=IwAR1ET8fjdtytMj9AyQCCbbBYUHOPvKgKMB7kvmlsfaQ6SNxmDn2whdbmh_k*
 	
 ## Setup
 To test the game, just download all the files and find the .exe file in the folders. Click it and there you go! Have fun.
