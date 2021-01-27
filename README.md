@@ -1,9 +1,11 @@
 # The Last President
-Simple game for school project...
+Simple game for school project written on C# OOP...
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies Used](#technologies)
+* [Setup](#setup)
+* [Contribution](#contribution)
 
 ## General info
 The Last President is game with multiple years of history. It is written by team of 2 friends for a school project. 
