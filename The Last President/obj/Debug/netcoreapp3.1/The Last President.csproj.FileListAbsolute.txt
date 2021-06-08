@@ -24,3 +24,29 @@ C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netco
 C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.dll
 C:\the-last-president\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.pdb
 C:\the-last-president\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.genruntimeconfig.cache
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.exe
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.deps.json
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.json
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.dev.json
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.dll
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\bin\Debug\netcoreapp3.1\The Last President.pdb
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.csprojAssemblyReference.cache
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfoInputs.cache
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfo.cs
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.csproj.CoreCompileInputs.cache
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.dll
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.pdb
+C:\Users\didim\OneDrive\Работен плот\Damian 9a\C#\The Last President\The Last President\obj\Debug\netcoreapp3.1\The Last President.genruntimeconfig.cache
+D:\school\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.exe
+D:\school\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.deps.json
+D:\school\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.json
+D:\school\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.runtimeconfig.dev.json
+D:\school\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.dll
+D:\school\The-Last-President-2021\The Last President\bin\Debug\netcoreapp3.1\The Last President.pdb
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.csproj.AssemblyReference.cache
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfoInputs.cache
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.AssemblyInfo.cs
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.csproj.CoreCompileInputs.cache
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.dll
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.pdb
+D:\school\The-Last-President-2021\The Last President\obj\Debug\netcoreapp3.1\The Last President.genruntimeconfig.cache

@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\the-last-president\\The-Last-President-2021\\The Last President\\The Last President.csproj": {}
+    "D:\\school\\The-Last-President-2021\\The Last President\\The Last President.csproj": {}
   },
   "projects": {
-    "C:\\the-last-president\\The-Last-President-2021\\The Last President\\The Last President.csproj": {
+    "D:\\school\\The-Last-President-2021\\The Last President\\The Last President.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\the-last-president\\The-Last-President-2021\\The Last President\\The Last President.csproj",
+        "projectUniqueName": "D:\\school\\The-Last-President-2021\\The Last President\\The Last President.csproj",
         "projectName": "The Last President",
-        "projectPath": "C:\\the-last-president\\The-Last-President-2021\\The Last President\\The Last President.csproj",
-        "packagesPath": "C:\\Users\\valbg\\.nuget\\packages\\",
-        "outputPath": "C:\\the-last-president\\The-Last-President-2021\\The Last President\\obj\\",
+        "projectPath": "D:\\school\\The-Last-President-2021\\The Last President\\The Last President.csproj",
+        "packagesPath": "C:\\Users\\Valentin\\.nuget\\packages\\",
+        "outputPath": "D:\\school\\The-Last-President-2021\\The Last President\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\valbg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Valentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -54,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
