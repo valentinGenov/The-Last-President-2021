@@ -173,13 +173,13 @@ namespace The_Last_President
                  */
 
 
-                foreach (var obj in CountriesList)
-                {
-                    if (choice == obj.NameOfCountry)
-                    {
-                        playerMovement(obj.NameOfCountry, firstCharacter);
-                    }
-                }
+                //foreach (var obj in CountriesList)
+                //{
+                //    if (choice == obj.NameOfCountry)
+                //    {
+                //        playerMovement(obj.NameOfCountry, firstCharacter);
+                //    }
+                //}
 
                
 
