@@ -195,7 +195,7 @@ namespace The_Last_President
             }
         }
 
-            public static void playerMovement (Country countries, Character character)
+            public static void playerMovement (Country countries, Character character, string blah)
             {
                 //Check if you are already in that contry
                 if (character.Location == countries.nameOfCountry)
@@ -219,121 +219,64 @@ namespace The_Last_President
                     //We make 3 dead volumes and they are choosed randomly... low(0-1000), meidum(0-50000), high(50000-4000000)
 
                     int randVolume = Country.RandomNumber(1, 3);
-                    if (randVolume == 1)
+                if (randVolume == 1)
+                {
+                    //LOW VOLUME
+                    int randDeaths1 = Country.RandomNumber(0, 1000);
+                    for (int i = 0; i <= 5; i++)
                     {
-                        //LOW VOLUME
-                        int randDeaths1 = Country.RandomNumber(0, 1000);
-                        int randDeaths2 = Country.RandomNumber(0, 1000);
-                        int randDeaths3 = Country.RandomNumber(0, 1000);
-                        int randDeaths4 = Country.RandomNumber(0, 1000);
-                        int randDeaths5 = Country.RandomNumber(0, 1000);
-
                         countries.CurrentPopulation -= randDeaths1;
-                        countries.CurrentPopulation -= randDeaths2;
-                        countries.CurrentPopulation -= randDeaths3;
-                        countries.CurrentPopulation -= randDeaths4;
-                        countries.CurrentPopulation -= randDeaths5;
                     }
-                    else if (randVolume == 2)
+                }
+                else if (randVolume == 2)
+                {
+
+                    //MID VOLUME
+                    int randDeaths1 = Country.RandomNumber(0, 50000);
+
+                    for (int i = 0; i <= 5; i++)
                     {
-                        int randDeaths1 = Country.RandomNumber(0, 50000);
-                        int randDeaths2 = Country.RandomNumber(0, 50000);
-                        int randDeaths3 = Country.RandomNumber(0, 50000);
-                        int randDeaths4 = Country.RandomNumber(0, 50000);
-                        int randDeaths5 = Country.RandomNumber(0, 50000);
-
                         countries.CurrentPopulation -= randDeaths1;
-                        countries.CurrentPopulation -= randDeaths2;
-                        countries.CurrentPopulation -= randDeaths3;
-                        countries.CurrentPopulation -= randDeaths4;
-                        countries.CurrentPopulation -= randDeaths5;
                     }
-                    else if (randVolume == 3)
+                }
+                else if (randVolume == 3)
+                {
+                    //HIGH VOLUME
+                    int randDeaths1 = Country.RandomNumber(50000, 4000000);
+
+                    for (int i = 0; i <= 5; i++)
                     {
-                        int randDeaths1 = Country.RandomNumber(50000, 4000000);
-                        int randDeaths2 = Country.RandomNumber(50000, 4000000);
-                        int randDeaths3 = Country.RandomNumber(50000, 4000000);
-                        int randDeaths4 = Country.RandomNumber(50000, 4000000);
-                        int randDeaths5 = Country.RandomNumber(50000, 4000000);
-
                         countries.CurrentPopulation -= randDeaths1;
-                        countries.CurrentPopulation -= randDeaths2;
-                        countries.CurrentPopulation -= randDeaths3;
-                        countries.CurrentPopulation -= randDeaths4;
-                        countries.CurrentPopulation -= randDeaths5;
                     }
+                }
 
                     //President being dead or saved logic
                     //1. Being dead or not
 
-                    int randDie1 = Country.RandomNumber(1, 6);
-                    int randDie2 = Country.RandomNumber(1, 6);
-                    int randDie3 = Country.RandomNumber(1, 6);
-                    int randDie4 = Country.RandomNumber(1, 6);
-                    int randDie5 = Country.RandomNumber(1, 6);
-                    if (randDie1 == 1)
+                    for (int i = 0; i <= 5; i++)
                     {
-                        if (countries.PresidentOfCountry == "Alive & Saved")
-                        {
+                        int randDie = Country.RandomNumber(1, 6);
 
-                        }
-                        else
+                        if (randDie == 1)
                         {
-                            countries.PresidentOfCountry = "Death";
-                        }
-                    }
-                    if (randDie2 == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Alive & Saved")
-                        {
-                            //continue
-                        }
-                        else
-                        {
-                            countries.PresidentOfCountry = "Death";
-                        }
-                    }
-                    if (randDie3 == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Alive & Saved")
-                        {
-                            //continue
-                        }
-                        else
-                        {
-                            countries.PresidentOfCountry = "Death";
-                        }
-                    }
-                    if (randDie4 == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Alive & Saved")
-                        {
-                            //continue
-                        }
-                        else
-                        {
-                            countries.PresidentOfCountry = "Death";
-                        }
-                    }
-                    if (randDie5 == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Alive & Saved")
-                        {
-                            //continue
-                        }
-                        else
-                        {
-                            countries.PresidentOfCountry = "Death";
+                            if (countries.PresidentOfCountry == "Alive & Saved")
+                            {
+
+                            }
+                            else
+                            {
+                                countries.PresidentOfCountry = "Death";
+                            }
                         }
                     }
 
 
                     //2. Being saved or not if not dead already
+
+                    for (int i = 0; i <= 5; i++)
+                {
+
                     int randSave1a = Country.RandomNumber(1, 3);
-                    int randSave2a = Country.RandomNumber(1, 3);
-                    int randSave3a = Country.RandomNumber(1, 3);
-                    int randSave4a = Country.RandomNumber(1, 3);
-                    int randSave5a = Country.RandomNumber(1, 3);
 
                     if (randSave1a == 1)
                     {
@@ -341,60 +284,13 @@ namespace The_Last_President
                         {
                             //continue
                         }
-                        else if (character.Location == "Bulgaria")
+                        else if (character.Location == blah)
                         {
                             countries.PresidentOfCountry = "Alive & Saved";
                             character.Points++;
                         }
                     }
-                    if (randSave2a == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Death")
-                        {
-                            //continue
-                        }
-                        else if (character.Location == "Germany")
-                        {
-                           countries.PresidentOfCountry = "Alive & Saved";
-                            character.Points++;
-                        }
-                    }
-                    if (randSave3a == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Death")
-                        {
-                            //continue
-                        }
-                        else if (character.Location == "France")
-                        {
-                            countries.PresidentOfCountry = "Alive & Saved";
-                            character.Points++;
-                        }
-                    }
-                    if (randSave4a == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Death")
-                        {
-                            //continue
-                        }
-                        else if (character.Location == "Italy")
-                        {
-                            countries.PresidentOfCountry = "Alive & Saved";
-                            character.Points++;
-                        }
-                    }
-                    if (randSave5a == 1)
-                    {
-                        if (countries.PresidentOfCountry == "Death")
-                        {
-                            //continue
-                        }
-                        else if (character.Location == "US")
-                        {
-                            countries.PresidentOfCountry = "Alive & Saved";
-                            character.Points++;
-                        }
-                    }
+                }
                 }
                 else if (choiceToContinueBulgaria == "n" || choiceToContinueBulgaria == "no" || choiceToContinueBulgaria == "No")
                 {

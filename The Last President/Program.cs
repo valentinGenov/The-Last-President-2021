@@ -91,46 +91,7 @@ namespace The_Last_President
                 }
             }
 
-            //if (firstCharacter.PlaceOfBirth == "Bulgaria")
-            //{
-            //    CountriesList.Bulgaria.PresidentOfCountry = "Alive & Saved";
-            //    Console.WriteLine("Since you choose Bulgaria you automaticaly saved The President Of Bulgaria!");
-            //    firstCharacter.Points++;
-            //}
-            //else if (firstCharacter.PlaceOfBirth == "Germany")
-            //{
-            //    Germany.PresidentOfCountry = "Alive & Saved";
-            //    Console.WriteLine("Since you choose Germany you automaticaly saved The President Of Germany!");
-            //    firstCharacter.Points++;
-            //}
-            //else if (firstCharacter.PlaceOfBirth == "France")
-            //{
-            //    France.PresidentOfCountry = "Alive & Saved";
-            //    Console.WriteLine("Since you choose France you automaticaly saved The President Of France!");
-            //    firstCharacter.Points++;
-            //}
-            //else if (firstCharacter.PlaceOfBirth == "Italy")
-            //{
-            //    Italy.PresidentOfCountry = "Alive & Saved";
-            //    Console.WriteLine("Since you choose Italy you automaticaly saved The President Of Italy");
-            //    firstCharacter.Points++;
-            //}
-            //else if (firstCharacter.PlaceOfBirth == "US")
-            //{
-            //    US.PresidentOfCountry = "Alive & Saved";
-            //    Console.WriteLine("Since you choose United States you automaticaly saved The President Of United States!");
-            //    firstCharacter.Points++;
-            //}
-            //else
-            //{
-            //    Console.WriteLine("You inputed place of birth not in the data...");
-            //}
-
-            /*
-             * 
-             * GAME ROUNDS AND OTHER LOGIC IMPLEMENTED IN HERE
-             * 
-             */
+          
 
             for (int i = 1; i < 100; i++)
             {
@@ -162,156 +123,17 @@ namespace The_Last_President
 
                 string choice = Console.ReadLine();
 
+
+
                 Console.WriteLine("\n");
 
-                //Different code path depending on the choice
-
-                /*
-                 * 
-                 *  PLAYER MOVEMENT LOGIC HERE
-                 * 
-                 */
-
-
-                //foreach (var obj in CountriesList)
-                //{
-                //    if (choice == obj.NameOfCountry)
-                //    {
-                //        playerMovement(obj.NameOfCountry, firstCharacter);
-                //    }
-                //}
-
-               
-
-                //int checkForDeaths = Bulgaria.CurrentPopulation + France.CurrentPopulation + US.CurrentPopulation + Germany.CurrentPopulation + Italy.CurrentPopulation;
-
-                //if (firstCharacter.Points == 6)
-                //{
-                //    //WIN
-                //    Console.WriteLine("Well done brave soldier, " + firstCharacter.Name + ", the Presidents have been saved and the world can recover a little easier. The bodyguard was awarded a medal for bravery, a medal for bravery and a medal for devotion.");
-                //    Console.WriteLine("Reason for win: You saved all 6 presidents! Congrats!");
-                //    break;
-                //}
-                //else if (checkForDeaths < 100 && firstCharacter.Points < 3)
-                //{
-                //    //LOSE
-                //    Console.WriteLine("Well done to you, brave soldier, you did well, but you failed to save enough presidents.And the world cannot be restored.");
-                //    Console.WriteLine("Reason for lose: All people of the world died... Try to save more presidents faster!");
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 3)
-                //{
-                //    //LOSE
-                //    Console.WriteLine("Well done to you, brave soldier, you did well, but you failed to save enough presidents.And the world cannot be restored.");
-                //    Console.WriteLine("Reason for lose: All presidents died... Try to save at least 3 presidents faster!");
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points >= 3)
-                //{
-                //    //WIN
-                //    Console.WriteLine("Well done brave soldier, " + firstCharacter.Name + ", the Presidents have been saved and the world can recover a little easier. The bodyguard was awarded a medal for bravery, a medal for bravery and a medal for devotion.");
-                //    Console.WriteLine("Reason for win: All presidents died, but you managed to save" + firstCharacter.Points + " presidents!");
-                //    break;
-                //} //ENDING 1
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" & firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (France.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 1)
-                //{
-                //    break;
-                //}
-                //else if (Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //} //ENDINGS 2
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" & firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //} // ENDING 3
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && US.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && Germany.PresidentOfCountry == "Death" && France.PresidentOfCountry == "Death" && Italy.PresidentOfCountry == "Death" && firstCharacter.Points < 2)
-                //{
-                //    break;
-                //}
-                //else if (Bulgaria.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
-                //{
-                //    break;
-                //}
-                //else if (Germany.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
-                //{
-                //    break;
-                //}
-                //else if (France.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
-                //{
-                //    break;
-                //}
-                //else if (Italy.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
-                //{
-                //    break;
-                //}
-                //else if (US.PresidentOfCountry == "Death" && firstCharacter.Points == 4)
-                //{
-                //    break;
-                //}
-
-
-
+                foreach (var obj in CountriesList)
+                {
+                    if (choice == obj.NameOfCountry)
+                    {
+                        playerMovement(obj, firstCharacter, obj.NameOfCountry);
+                    }
+                }
             }
         }
     }
